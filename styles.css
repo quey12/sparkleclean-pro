@@ -1,43 +1,45 @@
 /* Root Variables */
 :root {
-  --primary: #007bff;
-  --secondary: #4facfe;
-  --light: #f8f9fa;
-  --dark: #212529;
-  --success: #28a745;
+  --primary: #007bff; /* Blue */
+  --secondary: #4facfe; /* Light blue */
+  --light: #f8f9fa; /* Light gray */
+  --dark: #212529; /* Dark gray */
+  --success: #28a745; /* Green */
+  --brand-green: #2c6e49; /* Custom green for pricing/CTA */
+  --brand-green-hover: #1f4d36; /* Darker green for hover */
 }
 
 /* Global Styles */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  line-height: 1.6;
   color: var(--dark);
+  line-height: 1.6;
 }
 
 /* Header and Navigation */
 header {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   padding: 1rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 1rem;
 }
 
@@ -61,8 +63,8 @@ nav {
 
 .nav-links a {
   color: #fff;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: opacity 0.3s;
 }
 
@@ -72,28 +74,28 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: url("images/oc.jpg") center/cover no-repeat;
-  height: 90vh;
-  display: flex;
   align-items: center;
+  background: url("images/oc.jpg") center/cover no-repeat;
   color: #fff;
-  position: relative;
+  display: flex;
+  height: 90vh;
   padding-top: 5rem;
+  position: relative;
 }
 
 .hero::before {
+  background: rgba(0, 0, 0, 0.5);
   content: "";
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 2rem;
   position: relative;
   z-index: 1;
@@ -101,8 +103,8 @@ nav {
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -113,21 +115,21 @@ nav {
 
 /* Buttons */
 .btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
   background: var(--primary);
-  color: #fff;
-  text-decoration: none;
   border-radius: 5px;
+  color: #fff;
+  display: inline-block;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 1px;
-  transition: transform 0.3s, background 0.3s;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
   background: var(--secondary);
+  transform: translateY(-3px);
 }
 
 /* General Section Styles */
@@ -136,26 +138,26 @@ section {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 1rem;
 }
 
 .section-title {
-  text-align: center;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .section-title h2 {
-  font-size: 2.5rem;
   color: var(--primary);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .section-title p {
   color: #666;
-  max-width: 700px;
   margin: 0 auto;
+  max-width: 700px;
 }
 
 /* Services Section */
@@ -165,16 +167,16 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .service-card {
   background: #fff;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -183,14 +185,108 @@ section {
 }
 
 .service-icon {
-  font-size: 3rem;
   color: var(--primary);
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .service-card h3 {
   color: var(--dark);
   margin-bottom: 1rem;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.pricing-card h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: var(--brand-green);
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.price-subtext {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  color: #555;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.pricing-card .btn {
+  background-color: var(--brand-green);
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.pricing-card .btn:hover {
+  background-color: var(--brand-green-hover);
+  transform: translateY(-3px);
+}
+
+.pricing-notes {
+  color: #777;
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pricing-notes .cta-link {
+  color: var(--brand-green);
+  text-decoration: underline;
+}
+
+.pricing-notes .cta-link:hover {
+  color: var(--brand-green-hover);
 }
 
 /* Data Center Cleaning Section */
@@ -203,54 +299,64 @@ section {
   text-align: center;
 }
 
+/* Restaurant and Bar Cleaning Section */
+.restaurant-bar-cleaning {
+  background-color: #fff;
+  padding: 5rem 2rem;
+}
+
+.restaurant-bar-content {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 .intro-text {
   margin-bottom: 2.5rem;
 }
 
 .intro-text p {
-  font-size: 1rem;
   color: #555;
+  font-size: 1rem;
   line-height: 1.6;
-  max-width: 900px;
   margin: 0 auto 1rem;
+  max-width: 900px;
 }
 
-/* Services and Benefits Container */
 .services-benefits {
+  align-items: flex-start;
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align tops of lists */
-  gap: 2.5rem;
-  margin-bottom: 2.5rem;
   flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
 }
 
 .services-list,
 .benefits-list {
-  flex: 1;
-  min-width: 300px;
-  max-width: 400px; /* Prevent lists from sprawling too wide */
   background: #fff;
   border-radius: 8px;
-  padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 1.5rem;
 }
 
 .services-list h3,
 .benefits-list h3 {
+  color: #333;
   font-size: 1.5rem;
-  color: var(--dark);
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .services-list ul,
 .benefits-list ul {
-  list-style-type: disc;
-  padding-left: 1.5rem; /* Consistent indentation */
-  margin: 0;
-  text-align: left; /* Ensure text aligns left within centered container */
   color: #555;
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.5rem;
+  text-align: left;
 }
 
 .services-list li,
@@ -260,41 +366,42 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* Closing Text */
+.pricing-teaser {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pricing-teaser h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pricing-teaser p {
+  color: #777;
+  font-size: 16px;
+}
+
+.closing-text {
+  text-align: center;
+}
+
 .closing-text p {
-  font-size: 1.1rem;
   color: #555;
-  max-width: 900px;
+  font-size: 1.1rem;
   margin: 0 auto;
+  max-width: 900px;
 }
 
-.closing-text .cta-link {
-  color: var(--primary);
-  text-decoration: none;
+.cta-link {
+  color: var(--brand-green);
   font-weight: bold;
+  text-decoration: none;
 }
 
-.closing-text .cta-link:hover {
+.cta-link:hover {
+  color: var(--brand-green-hover);
   text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .services-benefits {
-    flex-direction: column;
-    align-items: center; /* Center items in column layout */
-    gap: 1.5rem;
-  }
-
-  .services-list,
-  .benefits-list {
-    max-width: 100%; /* Full width on smaller screens */
-  }
-
-  .services-list ul,
-  .benefits-list ul {
-    padding-left: 1rem; /* Adjust padding for smaller screens */
-  }
 }
 
 /* Steps Section */
@@ -305,13 +412,13 @@ section {
 .steps-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
 }
 
 .step {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 3rem;
 }
 
@@ -320,18 +427,18 @@ section {
 }
 
 .step-number {
-  background: var(--primary);
-  color: #fff;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background: var(--primary);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  flex-shrink: 0;
   font-size: 1.5rem;
   font-weight: bold;
+  height: 3.75rem;
+  justify-content: center;
   margin-right: 2rem;
-  flex-shrink: 0;
+  width: 3.75rem;
 }
 
 .step-content h3 {
@@ -346,46 +453,46 @@ section {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .testimonial-card {
   background: #fff;
   border-radius: 10px;
-  padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
 }
 
 .testimonial-text {
-  font-style: italic;
   color: #555;
+  font-style: italic;
   margin-bottom: 1.5rem;
 }
 
 .testimonial-author {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .testimonial-avatar {
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 50%;
-  margin-right: 1rem;
   background: #ddd;
+  border-radius: 50%;
+  height: 3.125rem;
+  margin-right: 1rem;
   overflow: hidden;
+  width: 3.125rem;
 }
 
 .testimonial-avatar img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .testimonial-name {
-  font-weight: bold;
   color: var(--dark);
+  font-weight: bold;
 }
 
 .testimonial-position {
@@ -393,61 +500,15 @@ section {
   font-size: 0.9rem;
 }
 
-/* Call to Action Section */
-.cta {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
-
-.cta .btn {
-  background: #fff;
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-.cta .btn:hover {
-  background: var(--light);
-}
-
-/* Get Quote Section */
-.get-quote {
-  padding: 5rem 2rem;
-  background: #fff; /* Matches other sections; adjust if needed */
-}
-
-.typeform-container {
-  max-width: 800px; /* Limits form width for readability */
-  margin: 0 auto; /* Centers the form */
-  text-align: center; /* Ensures alignment */
-}
-
-/* Ensure Typeform iframe fits nicely */
-[data-tf-live] {
-  width: 100%;
-  min-height: 600px; /* Adjust based on your form's height */
-  border: none; /* Removes default borders if any */
-}
-
+/* FAQ Section */
 .faq {
-  padding: 5rem 2rem;
   background: var(--light);
+  padding: 5rem 2rem;
 }
 
 .faq-container {
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
 }
 
 .faq-item {
@@ -455,15 +516,33 @@ section {
 }
 
 .faq-item h3 {
-  font-size: 1.5rem;
   color: var(--dark);
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .faq-item p {
-  font-size: 1rem;
   color: #555;
+  font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Get Quote Section */
+.get-quote {
+  background: #fff;
+  padding: 5rem 2rem;
+}
+
+.typeform-container {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+[data-tf-live] {
+  border: none;
+  min-height: 600px;
+  width: 100%;
 }
 
 /* Footer */
@@ -475,13 +554,13 @@ footer {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .footer-column h3 {
-  font-size: 1.3rem;
   color: var(--light);
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -497,35 +576,12 @@ footer {
   color: #fff;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-link {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: #444;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.social-link:hover {
-  background: var(--primary);
-}
-
 .copyright {
-  text-align: center;
-  padding-top: 3rem;
-  color: #777;
   border-top: 1px solid #444;
+  color: #777;
   margin-top: 3rem;
+  padding-top: 3rem;
+  text-align: center;
 }
 
 /* Media Queries */
@@ -547,19 +603,20 @@ footer {
   }
 
   .services-benefits {
+    align-items: center;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .services-list,
   .benefits-list {
-    text-align: center;
+    max-width: 100%;
   }
 
   .services-list ul,
   .benefits-list ul {
-    padding-left: 0;
     list-style-position: inside;
+    padding-left: 0;
   }
 
   .step {
@@ -569,9 +626,5 @@ footer {
 
   .step-number {
     margin: 0 auto 1rem;
-  }
-
-  .cta h2 {
-    font-size: 2rem;
   }
 }
