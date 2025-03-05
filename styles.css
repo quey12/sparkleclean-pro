@@ -651,3 +651,22 @@ section,
 .faq-item {
   will-change: opacity, transform;
 }
+
+.quote-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.typeform-container,
+.calendly-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.typeform-container h3,
+.calendly-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
