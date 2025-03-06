@@ -18,7 +18,6 @@
       Cleaning
     </title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Favicon using PNG -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <script type="application/ld+json">
       {
@@ -44,15 +43,53 @@
     <header>
       <nav>
         <div class="logo">Sparkle<span>Clean</span> Pro</div>
+        <div class="hamburger">☰</div>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#affiliate">Affiliate Program</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+
+    <section id="affiliate" class="affiliate fade-in">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2>Join Our Affiliate Partner Program</h2>
+          <p>
+            Earn money by referring businesses to SparkleClean Pro’s premium
+            cleaning services. Sign up today and start building your residual
+            income!
+          </p>
+        </div>
+        <div class="affiliate-content fade-in">
+          <h3>How It Works</h3>
+          <ul>
+            <li>
+              <strong>Sign Up:</strong> Join our program and get your unique
+              referral link.
+            </li>
+            <li>
+              <strong>Refer Businesses:</strong> Share your link with businesses
+              needing office, restaurant, liquor store, or data center cleaning.
+            </li>
+            <li>
+              <strong>Earn Commissions:</strong> Get 20% of the initial contract
+              value plus 20% monthly residual income for every active client.
+            </li>
+          </ul>
+          <p>
+            <strong>Example:</strong> Refer a business to our Professional Plan
+            ($1,600/month) and earn $320 upfront plus $320/month as long as they
+            stay with us!
+          </p>
+          <a href="affiliate-signup.html" class="btn">Learn More & Sign Up</a>
+        </div>
+      </div>
+    </section>
 
     <section class="hero fade-in">
       <div class="hero-content">
@@ -207,8 +244,8 @@
         <div class="pricing-notes fade-in">
           <p>
             <strong>Add-Ons:</strong> Extra restrooms ($25/week), windows
-            ($50/visit), carpets ($0.20/sq ft). <br />
-            <strong>Save More:</strong> 10% off with annual plans! <br />
+            ($50/visit), carpets ($0.20/sq ft).<br />
+            <strong>Save More:</strong> 10% off with annual plans!<br />
             <a href="#get-quote" class="cta-link">Contact us</a> for data
             center, restaurant, or liquor store pricing.
           </p>
@@ -368,7 +405,6 @@
           </div>
           <div class="calendly-container fade-in">
             <h3>Schedule a Consultation</h3>
-            <!-- Calendly inline widget begin -->
             <div
               class="calendly-inline-widget"
               data-url="https://calendly.com/nquaranta-sparklecleanpronj"
@@ -379,7 +415,6 @@
               src="https://assets.calendly.com/assets/external/widget.js"
               async
             ></script>
-            <!-- Calendly inline widget end -->
           </div>
         </div>
       </div>
@@ -449,6 +484,11 @@
           }
         );
         elements.forEach((element) => observer.observe(element));
+
+        // Hamburger menu toggle
+        document.querySelector(".hamburger").addEventListener("click", () => {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
       });
     </script>
   </body>

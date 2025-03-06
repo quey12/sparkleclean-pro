@@ -56,6 +56,13 @@
         <priority>0.9</priority>
     </url>
 
+    <url>
+    <loc>https://www.sparklecleanpronj.com/#affiliate</loc>
+    <lastmod>2025-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+<   </url>
+
     <!-- Contact Section (Footer) -->
     <url>
         <loc>https://www.sparklecleanpronj.com/#contact</loc>
