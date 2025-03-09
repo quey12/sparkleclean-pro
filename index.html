@@ -65,28 +65,33 @@
             income!
           </p>
         </div>
-        <div class="affiliate-content fade-in">
-          <h3>How It Works</h3>
-          <ul>
-            <li>
-              <strong>Sign Up:</strong> Join our program and get your unique
-              referral link.
-            </li>
-            <li>
-              <strong>Refer Businesses:</strong> Share your link with businesses
-              needing office, restaurant, liquor store, or data center cleaning.
-            </li>
-            <li>
-              <strong>Earn Commissions:</strong> Get 20% of the initial contract
-              value plus 20% monthly residual income for every active client.
-            </li>
-          </ul>
-          <p>
-            <strong>Example:</strong> Refer a business to our Professional Plan
-            ($1,600/month) and earn $320 upfront plus $320/month as long as they
-            stay with us!
-          </p>
-          <a href="affiliate-signup.html" class="btn">Learn More & Sign Up</a>
+        <div class="affiliate-carousel fade-in">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-card">
+                <span class="affiliate-icon">📝</span>
+                <h3>Sign Up</h3>
+                <p>Join our program and get your unique referral link.</p>
+              </div>
+              <div class="carousel-card">
+                <span class="affiliate-icon">🤝</span>
+                <h3>Refer Businesses</h3>
+                <p>
+                  Share your link with businesses needing cleaning services.
+                </p>
+              </div>
+              <div class="carousel-card">
+                <span class="affiliate-icon">💰</span>
+                <h3>Earn Commissions</h3>
+                <p>Get 20% initial contract value + 20% monthly residuals.</p>
+              </div>
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+          <a href="affiliate-signup.html" class="btn affiliate-btn"
+            >Learn More & Sign Up</a
+          >
         </div>
       </div>
     </section>
@@ -443,7 +448,7 @@
             <a href="#liquor-store-cleaning">Liquor Store Cleaning</a>
           </div>
           <div class="footer-column fade-in">
-            <h3>Contact Us in</h3>
+            <h3>Contact Us</h3>
             <p>Phone: (312) 203-8106</p>
             <p>
               Email:
@@ -478,10 +483,7 @@
               }
             });
           },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px",
-          }
+          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
         );
         elements.forEach((element) => observer.observe(element));
 
@@ -489,6 +491,60 @@
         document.querySelector(".hamburger").addEventListener("click", () => {
           document.querySelector(".nav-links").classList.toggle("active");
         });
+
+        // Carousel functionality
+        const track = document.querySelector(".carousel-track");
+        const cards = document.querySelectorAll(".carousel-card");
+        const prevBtn = document.querySelector(".carousel-btn.prev");
+        const nextBtn = document.querySelector(".carousel-btn.next");
+        let currentIndex = 0;
+
+        function updateCardWidth() {
+          const containerWidth = document.querySelector(
+            ".carousel-container"
+          ).offsetWidth;
+          const cardStyle = getComputedStyle(cards[0]);
+          const cardWidth =
+            cards[0].offsetWidth +
+            parseFloat(cardStyle.marginLeft) +
+            parseFloat(cardStyle.marginRight);
+          const visibleCards = Math.floor(containerWidth / cardWidth);
+          const maxIndex = cards.length - visibleCards;
+          return { cardWidth, visibleCards, maxIndex };
+        }
+
+        function updateCarousel() {
+          const { cardWidth, maxIndex } = updateCardWidth();
+          if (currentIndex < 0) currentIndex = 0;
+          if (currentIndex > maxIndex) currentIndex = maxIndex;
+          track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex++;
+          updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          currentIndex--;
+          updateCarousel();
+        });
+
+        // Auto-scroll every 5 seconds (optional)
+        setInterval(() => {
+          currentIndex++;
+          const { maxIndex } = updateCardWidth();
+          if (currentIndex > maxIndex) currentIndex = 0;
+          updateCarousel();
+        }, 5000);
+
+        // Update on window resize
+        window.addEventListener("resize", () => {
+          updateCarousel();
+        });
+
+        // Initial update
+        updateCarousel();
       });
     </script>
   </body>
