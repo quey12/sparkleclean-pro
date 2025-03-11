@@ -498,6 +498,8 @@
         const prevBtn = document.querySelector(".carousel-btn.prev");
         const nextBtn = document.querySelector(".carousel-btn.next");
         let currentIndex = 0;
+        let startX,
+          isDragging = false;
 
         function updateCardWidth() {
           const containerWidth = document.querySelector(
@@ -508,7 +510,10 @@
             cards[0].offsetWidth +
             parseFloat(cardStyle.marginLeft) +
             parseFloat(cardStyle.marginRight);
-          const visibleCards = Math.floor(containerWidth / cardWidth);
+          const visibleCards =
+            window.innerWidth < 768
+              ? 1
+              : Math.floor(containerWidth / cardWidth);
           const maxIndex = cards.length - visibleCards;
           return { cardWidth, visibleCards, maxIndex };
         }
@@ -520,6 +525,7 @@
           track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         }
 
+        // Button controls
         nextBtn.addEventListener("click", () => {
           currentIndex++;
           updateCarousel();
@@ -530,7 +536,30 @@
           updateCarousel();
         });
 
-        // Auto-scroll every 5 seconds (optional)
+        // Touch controls
+        track.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+        });
+
+        track.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          const currentX = e.touches[0].clientX;
+          const diff = startX - currentX;
+          if (Math.abs(diff) > 50) {
+            // Swipe threshold
+            if (diff > 0) currentIndex++;
+            else currentIndex--;
+            updateCarousel();
+            isDragging = false;
+          }
+        });
+
+        track.addEventListener("touchend", () => {
+          isDragging = false;
+        });
+
+        // Auto-scroll (optional)
         setInterval(() => {
           currentIndex++;
           const { maxIndex } = updateCardWidth();
@@ -538,10 +567,8 @@
           updateCarousel();
         }, 5000);
 
-        // Update on window resize
-        window.addEventListener("resize", () => {
-          updateCarousel();
-        });
+        // Update on resize
+        window.addEventListener("resize", updateCarousel);
 
         // Initial update
         updateCarousel();
