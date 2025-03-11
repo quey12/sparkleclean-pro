@@ -46,6 +46,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
+  min-height: 60px; /* Ensure consistent height */
 }
 
 nav {
@@ -636,11 +637,13 @@ footer {
 .affiliate-signup {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   padding: 5rem 2rem;
+  padding-top: calc(5rem + 60px); /* Account for fixed header */
   color: #fff;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible; /* Prevent clipping */
 }
 
 .affiliate-signup .section-title h2 {
@@ -919,6 +922,11 @@ footer {
   .step-number {
     margin: 0 auto 1rem;
   }
+
+  .affiliate-signup {
+    padding: 3rem 1rem;
+    padding-top: calc(3rem + 60px); /* Adjust for mobile header */
+  }
 }
 
 @media (max-width: 480px) {
@@ -945,6 +953,7 @@ footer {
 
   .affiliate-signup {
     padding: 3rem 1rem;
+    padding-top: calc(3rem + 60px); /* Ensure consistency */
   }
 
   .signup-form {
@@ -963,5 +972,111 @@ footer {
 
   .signup-form .btn {
     padding: 0.8rem;
+  }
+}
+
+/* Trusted Brands Section */
+.trusted-brands {
+  background: #fff; /* Clean white background */
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.trusted-brands .section-title h2 {
+  color: var(--primary); /* Matches your theme */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.trusted-brands .section-title p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.brands-container {
+  overflow: hidden; /* Ensures clean edges */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.brands-track {
+  display: flex;
+  flex-wrap: nowrap; /* Horizontal scroll on mobile */
+  gap: 2rem; /* Space between logos */
+  justify-content: center; /* Center logos */
+  animation: scroll 20s linear infinite; /* Optional auto-scroll */
+}
+
+.brand-logo {
+  height: 50px; /* Adjust based on your logos */
+  width: auto;
+  max-width: 150px; /* Prevents overly large logos */
+  object-fit: contain; /* Maintains aspect ratio */
+  filter: grayscale(50%); /* Subtle modern effect */
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  filter: grayscale(0%); /* Full color on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Optional Auto-Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust based on content width */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .brands-track {
+    flex-wrap: wrap; /* Grid layout on desktop */
+    animation: none; /* Disable scroll on desktop */
+  }
+
+  .brand-logo {
+    flex: 0 0 calc(20% - 1.6rem); /* 5 logos per row, accounting for gap */
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .brands-track {
+    flex-wrap: nowrap; /* Ensure horizontal scroll on mobile */
+    overflow-x: auto; /* Enable manual scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding: 0 1rem; /* Extra padding for edges */
+    animation: none; /* Disable auto-scroll for manual control */
+  }
+
+  .brand-logo {
+    flex: 0 0 120px; /* Fixed width for mobile scrolling */
+  }
+
+  .brands-container {
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+
+  .brands-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+  }
+}
+
+@media (max-width: 480px) {
+  .trusted-brands {
+    padding: 3rem 1rem;
+  }
+
+  .brand-logo {
+    height: 40px; /* Smaller logos on small screens */
+    flex: 0 0 100px;
   }
 }
