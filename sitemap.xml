@@ -1,102 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main Homepage -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <!-- Services Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#services</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Pricing Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#pricing</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- How It Works Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#how-it-works</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Testimonials Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#testimonials</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- FAQ Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#faq</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Get Quote / Schedule Consultation Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#get-quote</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Affiliate Section -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#affiliate</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Contact Section (Footer) -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#contact</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Additional Learn More Pages (if they become separate pages later) -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#data-center-cleaning</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#restaurant-bar-cleaning</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.sparklecleanpronj.com/#liquor-store-cleaning</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Affiliate Signup Page -->
-    <url>
-        <loc>https://www.sparklecleanpronj.com/affiliate-signup.html</loc>
-        <lastmod>2025-03-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
+  <!-- Main Page with Anchor Links -->
+  <url>
+    <loc>https://www.magicqcleaning.com/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.magicqcleaning.com/#services</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.magicqcleaning.com/#how-it-works</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.magicqcleaning.com/#affiliate</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magicqcleaning.com/#brands</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magicqcleaning.com/#get-quote</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Affiliate Signup Page -->
+  <url>
+    <loc>https://www.magicqcleaning.com/affiliate-signup.html</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
