@@ -2,33 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta
       name="description"
-      content="SparkleClean Pro provides professional office, data center, restaurant/bar, and liquor store cleaning services in New Jersey, delivering spotless, sanitized workspaces for businesses."
+      content="Magic Q Cleaning: Tech-powered office and window cleaning services transforming workspaces in New Jersey."
     />
     <meta
       name="keywords"
-      content="office cleaning New Jersey, data center cleaning NJ, restaurant cleaning NJ, bar cleaning NJ, liquor store cleaning NJ, professional cleaning services NJ, commercial cleaning New Jersey, eco-friendly cleaning NJ, SparkleClean Pro"
+      content="tech cleaning New Jersey, office cleaning NJ, window cleaning NJ, smart cleaning solutions, commercial cleaning, Magic Q Cleaning"
     />
-    <meta name="author" content="SparkleClean Pro" />
+    <meta name="author" content="Magic Q Cleaning" />
     <meta name="robots" content="index, follow" />
-    <title>
-      SparkleClean Pro - NJ Office, Data Center, Restaurant & Liquor Store
-      Cleaning
-    </title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <!-- Added Canonical Tag -->
-    <link rel="canonical" href="https://www.sparklecleanpronj.com/" />
+    <title>Magic Q Cleaning - Next-Gen Cleaning</title>
+    <meta property="og:title" content="Magic Q Cleaning - Next-Gen Cleaning" />
+    <meta
+      property="og:description"
+      content="Tech-powered office and window cleaning services for modern businesses in New Jersey."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.magicqcleaning.com/" />
+    <meta
+      property="og:image"
+      content="https://www.magicqcleaning.com/images/favicon.png"
+    />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="canonical" href="https://www.magicqcleaning.com/" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "SparkleClean Pro",
-        "description": "Professional office, data center, restaurant/bar, and liquor store cleaning services in New Jersey.",
+        "name": "Magic Q Cleaning",
+        "description": "Tech-powered office and window cleaning services transforming workspaces in New Jersey.",
         "telephone": "(312) 203-8106",
-        "email": "nquaranta@sparklecleanpronj.com",
+        "email": "nquaranta@magicqcleaning.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "New Jersey",
@@ -36,548 +49,486 @@
           "addressCountry": "US"
         },
         "openingHours": ["Mo-Su 00:00-23:59"],
-        "url": "https://www.sparklecleanpronj.com/"
+        "url": "https://www.magicqcleaning.com/"
       }
     </script>
+    <style>
+      body {
+        background: #1a1a2e;
+        color: #ffffff;
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        overflow-x: hidden;
+        text-align: center;
+      }
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        padding: 2rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #00ddeb, #ff00ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #16213e;
+        align-items: center;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        margin: 1rem 0;
+      }
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: #00ddeb;
+      }
+      .hamburger {
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+        color: #00ddeb;
+      }
+      section {
+        padding: 4rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 1.75rem;
+      }
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        opacity: 0.85;
+        max-width: 800px;
+      }
+      .btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #00ddeb, #ff00ff);
+        color: #ffffff;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 221, 235, 0.4);
+      }
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 221, 235, 0.6);
+      }
+      .btn-secondary {
+        background: linear-gradient(
+          135deg,
+          #ff00ff,
+          #00ddeb
+        ); /* Reverse gradient for contrast */
+        margin-top: 1rem;
+      }
+      .card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 221, 235, 0.2);
+      }
+      .card-content {
+        display: block;
+      }
+      .card-back {
+        display: none;
+      }
+      .card.active .card-content {
+        display: none;
+      }
+      .card.active .card-back {
+        display: block;
+      }
+      .grid {
+        display: grid;
+        gap: 2rem;
+        margin: 0 auto;
+        max-width: 740px;
+      }
+      .steps-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 0 auto;
+        max-width: 100%;
+        justify-content: center;
+      }
+      .step {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        padding: 1.5rem;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+      .step:hover {
+        transform: translateY(-5px);
+      }
+      .brands-bar {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 2rem 0;
+        overflow: hidden;
+        width: 100%;
+      }
+      .brands-container {
+        display: flex;
+        animation: scroll 20s linear infinite;
+      }
+      .brands-track {
+        display: flex;
+        align-items: center;
+        min-width: 200%;
+      }
+      .brand-logo {
+        height: 60px;
+        margin: 0 2rem;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+      .brand-logo:hover {
+        opacity: 1;
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @media (min-width: 769px) {
+        .hamburger {
+          display: none;
+        }
+        .nav-links {
+          display: flex;
+          flex-direction: row;
+          position: static;
+          background: none;
+        }
+        .nav-links li {
+          margin: 0 2rem;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .steps-container {
+          justify-content: center;
+        }
+        .step {
+          flex: 0 0 calc(33.33% - 1rem);
+        }
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .card {
+          max-width: 320px;
+          height: auto;
+          min-height: 220px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .steps-container {
+          flex-direction: column;
+        }
+        .step {
+          max-width: 320px;
+        }
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .brand-logo {
+          height: 40px;
+          margin: 0 1rem;
+        }
+      }
+    </style>
   </head>
-
   <body>
     <header>
       <nav>
-        <div class="logo">Sparkle<span>Clean</span> Pro</div>
+        <div class="logo">Magic Q Cleaning</div>
         <div class="hamburger">☰</div>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#affiliate">Affiliate Program</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#affiliate">Affiliate</a></li>
+          <li><a href="#get-quote">Get Quote</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="affiliate" class="affiliate fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Join Our Affiliate Partner Program</h2>
+    <main>
+      <section id="services">
+        <div class="container">
+          <h1>Cleaning Simplified</h1>
           <p>
-            Earn money by referring businesses to SparkleClean Pro’s premium
-            cleaning services. Sign up today and start building your residual
-            income!
+            Next-gen office and window cleaning powered by smart technology in
+            New Jersey.
           </p>
-        </div>
-        <div class="affiliate-carousel fade-in">
-          <div class="carousel-container">
-            <div class="carousel-track">
-              <div class="carousel-card">
-                <span class="affiliate-icon">📝</span>
-                <h3>Sign Up</h3>
-                <p>Join our program and get your unique referral link.</p>
+          <div class="grid">
+            <div class="card">
+              <div class="card-content">
+                <h3>Office Cleaning</h3>
+                <p>Precision for modern workspaces.</p>
               </div>
-              <div class="carousel-card">
-                <span class="affiliate-icon">🤝</span>
-                <h3>Refer Businesses</h3>
+              <div class="card-back">
                 <p>
-                  Share your link with businesses needing cleaning services.
+                  AI-driven daily cleaning of offices and meeting rooms with
+                  eco-friendly solutions.
                 </p>
               </div>
-              <div class="carousel-card">
-                <span class="affiliate-icon">💰</span>
-                <h3>Earn Commissions</h3>
-                <p>Get 20% initial contract value + 20% monthly residuals.</p>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <h3>Window Cleaning</h3>
+                <p>Flawless transparency.</p>
+              </div>
+              <div class="card-back">
+                <p>
+                  Advanced tech for streak-free windows, enhancing your
+                  business’s appeal.
+                </p>
               </div>
             </div>
-            <button class="carousel-btn prev">❮</button>
-            <button class="carousel-btn next">❯</button>
           </div>
-          <a href="affiliate-signup.html" class="btn affiliate-btn"
-            >Learn More & Sign Up</a
-          >
+          <a href="#get-quote" class="btn">Scale Your Clean</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="fact-rotator">
-      <div class="centered-container">
-        <div class="fact-list">
-          <div class="fact-item">
-            <h1>First Impressions Boost Trust</h1>
-            <p>
-              Customers judge your business in seconds—clean windows signal
-              reliability and quality.
-            </p>
-          </div>
-          <div class="fact-item">
-            <h1>Up to 20% More Foot Traffic</h1>
-            <p>
-              Studies show clean storefronts can increase foot traffic by as
-              much as 20%.
-            </p>
-          </div>
-          <div class="fact-item">
-            <h1>Better Visibility Pays Off</h1>
-            <p>
-              Clear windows showcase your products, drawing customers in with a
-              bright, inviting view.
-            </p>
-          </div>
-          <div class="fact-item">
-            <h1>Brighter Space, Happier Team</h1>
-            <p>
-              More natural light lifts employee morale, boosting productivity
-              and service quality.
-            </p>
-          </div>
-          <div class="fact-item">
-            <h1>Worth the Investment</h1>
-            <p>
-              Clean windows drive sales and perception—a small cost for a big
-              return.
-            </p>
+      <section id="how-it-works">
+        <div class="container">
+          <h2>How We Operate</h2>
+          <p>A tech-forward approach to urban cleaning.</p>
+          <div class="steps-container">
+            <div class="step">
+              <h3>1. Assess</h3>
+              <p>Data-driven consultation.</p>
+            </div>
+            <div class="step">
+              <h3>2. Optimize</h3>
+              <p>Custom AI schedules.</p>
+            </div>
+            <div class="step">
+              <h3>3. Execute</h3>
+              <p>Smart cleaning tech.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services" class="services fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Our Cleaning Services</h2>
+      <section id="affiliate">
+        <div class="container">
+          <h2>Join Our Affiliate Program</h2>
           <p>
-            We offer comprehensive cleaning solutions tailored for businesses to
-            keep your spaces spotless and professional.
+            Earn commissions by marketing Magic Q Cleaning—spread the word and
+            grow with us.
           </p>
+          <a href="./affiliate-signup.html" class="btn">Become an Affiliate</a>
         </div>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <div class="service-icon">🧹</div>
-            <h3>Daily Office Cleaning</h3>
-            <p>
-              Regular cleaning of workspaces, meeting rooms, and common areas to
-              maintain a pristine environment every day.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🪟</div>
-            <h3>Window & Glass Cleaning</h3>
-            <p>
-              Streak-free cleaning for all glass surfaces in your office,
-              ensuring maximum clarity.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🧽</div>
-            <h3>Deep Cleaning</h3>
-            <p>
-              Thorough cleaning of hard-to-reach areas in offices, eliminating
-              dirt and allergens.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🦠</div>
-            <h3>Sanitization Services</h3>
-            <p>
-              Medical-grade disinfection for businesses to reduce germs and
-              enhance workplace health.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🚽</div>
-            <h3>Restroom Maintenance</h3>
-            <p>
-              Complete cleaning and restocking of restroom facilities for
-              hygiene and comfort.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">♻️</div>
-            <h3>Green Cleaning</h3>
-            <p>
-              Eco-friendly cleaning solutions for businesses, prioritizing
-              health and sustainability.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">💻</div>
-            <h3>Data Center Cleaning</h3>
-            <p>
-              Specialized cleaning for NJ data centers to ensure optimal IT
-              infrastructure performance.
-            </p>
-            <a href="#data-center-cleaning" class="learn-more">Learn More</a>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🍽️</div>
-            <h3>Restaurant & Bar Cleaning</h3>
-            <p>
-              Expert cleaning for eateries and bars, keeping kitchens and dining
-              areas compliant and spotless.
-            </p>
-            <a href="#restaurant-bar-cleaning" class="learn-more">Learn More</a>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">🍾</div>
-            <h3>Liquor Store Cleaning</h3>
-            <p>
-              Specialized cleaning for NJ liquor stores, ensuring shelves,
-              floors, and display areas are pristine and inviting.
-            </p>
-            <a href="#liquor-store-cleaning" class="learn-more">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="trusted-brands">
-      <div class="container">
-        <div class="section-title">
-          <h2>Brands That Trust Us</h2>
-          <p>Trusted by industry leaders and innovators worldwide.</p>
-        </div>
+      <section id="brands" class="brands-bar">
         <div class="brands-container">
           <div class="brands-track">
-            <!-- Replace with actual brand logos -->
             <img
-              src="images\4a44580ac1ed3ccbf05f5e72ee10d5b3.jpg"
-              alt="Brand 1"
+              src="./images/Dominos-Logo.png"
+              alt="Domino's"
               class="brand-logo"
             />
             <img
-              src="images\starbucks-logo-png-transparent.png"
-              alt="Brand 2"
+              src="./images/kisspng-chanhassen-life-time-fitness-life-time-tri-series-life-time-5b246d375e7a85.923090621529113911387.jpg"
+              alt="Life Time Fitness"
               class="brand-logo"
             />
             <img
-              src="images\store-logo-europeanwaxcenter.png"
-              alt="Brand 3"
+              src="./images/starbucks-logo-png-transparent.png"
+              alt="Starbucks"
               class="brand-logo"
             />
-            <img src="images\sw-carrots.png" alt="Brand 4" class="brand-logo" />
             <img
-              src="images\Dominos-Logo.png"
-              alt="Brand 5"
+              src="./images/store-logo-europeanwaxcenter.png"
+              alt="European Wax Center"
               class="brand-logo"
             />
-            <img src="images\images.png" alt="Brand 6" class="brand-logo" />
+            <img
+              src="./images/sw-carrots.png"
+              alt="Sweetgreen"
+              class="brand-logo"
+            />
+            <!-- Duplicate for seamless loop -->
+            <img
+              src="./images/Dominos-Logo.png"
+              alt="Domino's"
+              class="brand-logo"
+            />
+            <img
+              src="./images/kisspng-chanhassen-life-time-fitness-life-time-tri-series-life-time-5b246d375e7a85.923090621529113911387.jpg"
+              alt="Life Time Fitness"
+              class="brand-logo"
+            />
+            <img
+              src="./images/starbucks-logo-png-transparent.png"
+              alt="Starbucks"
+              class="brand-logo"
+            />
+            <img
+              src="./images/store-logo-europeanwaxcenter.png"
+              alt="European Wax Center"
+              class="brand-logo"
+            />
+            <img
+              src="./images/sw-carrots.png"
+              alt="Sweetgreen"
+              class="brand-logo"
+            />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="how-it-works" class="steps fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>How It Works in NJ</h2>
-          <p>
-            Getting started with SparkleClean Pro is simple and hassle-free.
-          </p>
+      <section id="get-quote">
+        <div class="container">
+          <h2>Get Your Quote</h2>
+          <p>Unlock a cleaner future with a free consultation.</p>
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/nquaranta-sparklecleanpronj"
+            style="min-width: 320px; height: 630px"
+          ></div>
+          <a
+            href="https://g.page/r/CVEx_9U4EwPQEBM/review"
+            target="_blank"
+            class="btn btn-secondary"
+            >Leave a Review</a
+          >
         </div>
-        <div class="steps-container">
-          <div class="step fade-in">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Schedule a Consultation</h3>
-              <p>
-                Contact us for a free assessment of your office, data center,
-                restaurant, or liquor store cleaning needs.
-              </p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Customized NJ Cleaning Plan</h3>
-              <p>
-                We’ll create a tailored cleaning schedule for your business.
-              </p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Professional Cleaning in NJ</h3>
-              <p>
-                Our NJ team arrives with eco-friendly supplies to deliver
-                top-notch cleaning.
-              </p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Quality Assurance</h3>
-              <p>Regular inspections ensure satisfaction for NJ clients.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section id="testimonials" class="testimonials fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>What Our NJ Clients Say</h2>
-          <p>
-            Here’s what New Jersey businesses say about SparkleClean Pro’s
-            cleaning services.
-          </p>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card fade-in">
-            <p class="testimonial-text">
-              "SparkleClean Pro transformed our NJ office environment, boosting
-              team productivity."
-            </p>
-            <div class="testimonial-author">
-              <div>
-                <div class="testimonial-name">Sarah Hogan</div>
-                <div class="testimonial-position">
-                  Office Manager, Strawbridge, NJ
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card fade-in">
-            <p class="testimonial-text">
-              "No cleaning service in NJ matches SparkleClean Pro’s attention to
-              detail."
-            </p>
-            <div class="testimonial-author">
-              <div>
-                <div class="testimonial-name">Michael Chen</div>
-                <div class="testimonial-position">
-                  Founder, Bloomfield Solutions, NJ
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card fade-in">
-            <p class="testimonial-text">
-              "SparkleClean Pro’s NJ sanitization services maintain our medical
-              office’s high standards."
-            </p>
-            <div class="testimonial-author">
-              <div>
-                <div class="testimonial-name">Dr. Emily Fitzgerald</div>
-                <div class="testimonial-position">
-                  Owner, Brighter Days Wellness, NJ
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="faq fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Frequently Asked Questions - Cleaning Services</h2>
-          <p>Answers to common questions about our cleaning services.</p>
-        </div>
-        <div class="faq-container">
-          <div class="faq-item fade-in">
-            <h3>What areas do you serve?</h3>
-            <p>
-              We provide office, data center, restaurant, and liquor store
-              cleaning across the Tri-State area, including Connecticut. Contact
-              us to confirm your location!
-            </p>
-          </div>
-          <div class="faq-item fade-in">
-            <h3>How often can you clean our facility?</h3>
-            <p>
-              We offer flexible scheduling for businesses—daily, weekly, or
-              custom plans.
-            </p>
-          </div>
-          <div class="faq-item fade-in">
-            <h3>Are your cleaning products safe for businesses?</h3>
-            <p>Yes, we use eco-friendly and medical-grade products.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="get-quote" class="get-quote fade-in">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2>Get Your Free Cleaning Quote</h2>
-          <p>
-            Request a customized cleaning quote or schedule a consultation for
-            your New Jersey business today.
-          </p>
-        </div>
-        <div class="quote-options">
-          <div class="typeform-container fade-in">
-            <h3>Get a Quote</h3>
-            <div data-tf-live="01JNCCFVFW27VPTNMKFYY8PRGX"></div>
-            <script src="//embed.typeform.com/next/embed.js"></script>
-          </div>
-          <div class="calendly-container fade-in">
-            <h3>Schedule a Consultation</h3>
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/nquaranta-sparklecleanpronj"
-              style="min-width: 320px; height: 700px"
-            ></div>
-            <script
-              type="text/javascript"
-              src="https://assets.calendly.com/assets/external/widget.js"
-              async
-            ></script>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="contact" class="fade-in">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column fade-in">
-            <h3>SparkleClean Pro - NJ Cleaning Experts</h3>
-            <p>
-              Professional office, data center, restaurant, bar, and liquor
-              store cleaning services dedicated to New Jersey businesses,
-              creating healthier workspaces.
-            </p>
-          </div>
-          <div class="footer-column fade-in">
-            <h3>Our NJ Services</h3>
-            <a href="#services">Daily Office Cleaning</a>
-            <a href="#services">Deep Cleaning</a>
-            <a href="#services">Window Cleaning</a>
-            <a href="#services">Sanitization</a>
-            <a href="#services">Green Cleaning</a>
-            <a href="#data-center-cleaning">Data Center Cleaning</a>
-            <a href="#restaurant-bar-cleaning">Restaurant & Bar Cleaning</a>
-            <a href="#liquor-store-cleaning">Liquor Store Cleaning</a>
-          </div>
-          <div class="footer-column fade-in">
-            <h3>Contact Us</h3>
-            <p>Phone: (312) 203-8106</p>
-            <p>
-              Email:
-              <a href="mailto:nquaranta@sparklecleanpronj.com"
-                >nquaranta@sparklecleanpronj.com</a
-              >
-            </p>
-          </div>
-          <div class="footer-column fade-in">
-            <h3>Working Hours</h3>
-            <p>Monday - Sunday: 24 Hours</p>
-          </div>
-        </div>
-        <div class="copyright fade-in">
-          <p>
-            © 2025 SparkleClean Pro - New Jersey Cleaning Services. All rights
-            reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(".fade-in");
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-        );
-        elements.forEach((element) => observer.observe(element));
-
-        // Hamburger menu toggle
+        const navLinks = document.querySelector(".nav-links");
         document.querySelector(".hamburger").addEventListener("click", () => {
-          document.querySelector(".nav-links").classList.toggle("active");
+          navLinks.classList.toggle("active");
         });
-
-        // Carousel functionality
-        const track = document.querySelector(".carousel-track");
-        const cards = document.querySelectorAll(".carousel-card");
-        const prevBtn = document.querySelector(".carousel-btn.prev");
-        const nextBtn = document.querySelector(".carousel-btn.next");
-        let currentIndex = 0;
-        let startX,
-          isDragging = false;
-
-        function updateCardWidth() {
-          const containerWidth = document.querySelector(
-            ".carousel-container"
-          ).offsetWidth;
-          const cardStyle = getComputedStyle(cards[0]);
-          const cardWidth =
-            cards[0].offsetWidth +
-            parseFloat(cardStyle.marginLeft) +
-            parseFloat(cardStyle.marginRight);
-          const visibleCards =
-            window.innerWidth < 768
-              ? 1
-              : Math.floor(containerWidth / cardWidth);
-          const maxIndex = cards.length - visibleCards;
-          return { cardWidth, visibleCards, maxIndex };
-        }
-
-        function updateCarousel() {
-          const { cardWidth, maxIndex } = updateCardWidth();
-          if (currentIndex < 0) currentIndex = 0;
-          if (currentIndex > maxIndex) currentIndex = maxIndex;
-          track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        }
-
-        // Button controls
-        nextBtn.addEventListener("click", () => {
-          currentIndex++;
-          updateCarousel();
+        document.querySelectorAll(".card").forEach((card) => {
+          card.addEventListener("click", () => {
+            card.classList.toggle("active");
+          });
+          card.addEventListener(
+            "touchstart",
+            (e) => {
+              e.preventDefault();
+              card.classList.toggle("active");
+            },
+            { passive: false }
+          );
         });
-
-        prevBtn.addEventListener("click", () => {
-          currentIndex--;
-          updateCarousel();
-        });
-
-        // Touch controls
-        track.addEventListener("touchstart", (e) => {
-          startX = e.touches[0].clientX;
-          isDragging = true;
-        });
-
-        track.addEventListener("touchmove", (e) => {
-          if (!isDragging) return;
-          const currentX = e.touches[0].clientX;
-          const diff = startX - currentX;
-          if (Math.abs(diff) > 50) {
-            // Swipe threshold
-            if (diff > 0) currentIndex++;
-            else currentIndex--;
-            updateCarousel();
-            isDragging = false;
-          }
-        });
-
-        track.addEventListener("touchend", () => {
-          isDragging = false;
-        });
-
-        // Auto-scroll (optional)
-        setInterval(() => {
-          currentIndex++;
-          const { maxIndex } = updateCardWidth();
-          if (currentIndex > maxIndex) currentIndex = 0;
-          updateCarousel();
-        }, 5000);
-
-        // Update on resize
-        window.addEventListener("resize", updateCarousel);
-
-        // Initial update
-        updateCarousel();
       });
     </script>
   </body>
